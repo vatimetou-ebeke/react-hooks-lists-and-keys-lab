@@ -1,11 +1,11 @@
 import React from "react";
 
 function ProjectItem({ name, about, technologies }) {
+  console.log(technologies)
   
-  technologies.map((technology)=>{ 
-    return (
-    <span key={technology.id }>{technology}</span>
-    );
+ const list= technologies.map((technology)=>{ 
+    return <span key={technology.id }>{technology}</span>
+    
 })
 
   console.log(technologies)
@@ -15,6 +15,8 @@ function ProjectItem({ name, about, technologies }) {
       <p>{about}</p>
       <div className="technologies">
         {/* render a <span> for each technology in the technologies array */}
+        
+      {list}
       </div>
     </div>
   );
