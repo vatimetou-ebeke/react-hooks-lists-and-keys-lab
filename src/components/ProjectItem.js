@@ -1,6 +1,12 @@
 import React from "react";
 
 function ProjectItem({ name, about, technologies }) {
+  
+  technologies.forEach((technology)=>{ return (<span key={technology.id }>{technology}</span>)
+})
+
+  // });
+  console.log(technologies)
   return (
     <div className="project-item">
       <h3>{name}</h3>
